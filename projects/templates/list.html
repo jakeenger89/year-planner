@@ -5,9 +5,13 @@
     <main>
         <div>
             <h1> My Projects</h1>
+            <p>
+                <a href="{% url 'create_project' %}">Create Project</a>
+            </p>
             {% if not list_projects %}
             <p>You are not assigned to any projects</p>
             {% else %}
+
             <table>
                 <thead>
                     <th>Name</th>

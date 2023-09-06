@@ -1,5 +1,6 @@
 from django.contrib import admin
 from projects.models import Project
+from tasks.models import Task
 
 # Register your models here.
 
@@ -10,4 +11,16 @@ class ProjectAdmin(admin.ModelAdmin):
         "name",
         "description",
         "owner",
+    )
+
+
+@admin.register(Task)
+class TaskAdmin(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "start_date",
+        "due_date",
+        "is_completed",
+        "project",
+        "assignee",
     )

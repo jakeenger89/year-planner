@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% extends 'base.html' %}
+{% block content %}
 
 <body>
     <main>
@@ -19,7 +13,7 @@
                     <th>Name</th>
                     <th>Number of tasks</th>
                 </thead>
-                {% for project in project_list %}
+                {% for project in projects_list %}
                 <tbody>
                     <tr>
                         <td>{{project.name}}</td>
@@ -33,5 +27,4 @@
     </main>
 
 </body>
-
-</html>
+{% endblock content %}

@@ -5,7 +5,7 @@
     <main>
         <div>
             <h1> My Projects</h1>
-            {% if not project_list %}
+            {% if not list_projects %}
             <p>You are not assigned to any projects</p>
             {% else %}
             <table>
@@ -13,7 +13,7 @@
                     <th>Name</th>
                     <th>Number of tasks</th>
                 </thead>
-                {% for project in projects_list %}
+                {% for project in list_projects %}
                 <tbody>
                     <tr>
                         <td>{{project.name}}</td>

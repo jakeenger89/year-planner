@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from accounts.forms import LogInForm
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -12,6 +11,7 @@ def user_login(request):
         if form.is_valid():
             username = form.cleaned_data["username"]
             password = form.cleaned_data["password"]
+
             user = authenticate(
                 request,
                 username=username,
@@ -19,7 +19,7 @@ def user_login(request):
             )
             if user is not None:
                 login(request, user)
-                return redirect("home")
+                return redirect("list_projects")
     else:
         form = LogInForm()
     context = {

@@ -1,19 +1,18 @@
 {% extends 'base.html' %}
 
-{% load static %}
+{% block title %}
+Create Project
+{% endblock title %}
 
 {% block content %}
-    <body>
-        <main>
-            <div>
-                <h1>Create New Project</h1>
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button>Create</button>
-                </form>
-            </div>
-        </main>
-    </body>
-</html>
+<main>
+    <div>
+        <h1>Create New Project</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Create</button>
+        </form>
+    </div>
+</main>
 {% endblock content %}

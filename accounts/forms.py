@@ -17,5 +17,5 @@ class SignUpForm(forms.Form):
     )
     password_confirmation = forms.CharField(
         max_length=150,
-        widget=forms.PasswordInput(),
+        widget=forms.PasswordInput,
     )

@@ -3,16 +3,14 @@
 {% load static %}
 
 {% block content %}
-    <body>
-        <main>
-            <div>
-                <h1>Login</h1>
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button>Login</button>
-                </div>
-            </main>
-        </body>
-    </html>
+<main>
+    <div>
+        <h1>Login</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Login</button>
+        </form>
+    </div>
+</main>
 {% endblock content %}

@@ -1,20 +1,18 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block content %}
-
-<body>
-    <main>
-        <div>
-            <h1>Login</h1>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button>Login</button>
-        </div>
-    </main>
-</body>
-
-</html>
-
+    <body>
+        <main>
+            <div>
+                <h1>Login</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button>Login</button>
+                </div>
+            </main>
+        </body>
+    </html>
 {% endblock content %}
